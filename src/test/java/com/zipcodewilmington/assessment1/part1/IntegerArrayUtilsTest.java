@@ -45,4 +45,5 @@ public class IntegerArrayUtilsTest {
         // : Then
         Assert.assertEquals(expected, actual, 0.01);
     }
+
 }
