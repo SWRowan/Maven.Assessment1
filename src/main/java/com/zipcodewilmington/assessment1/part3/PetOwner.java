@@ -8,17 +8,15 @@ import java.util.HashMap;
  */
 public class PetOwner {
 
-
     private String name;
-    private Pet pets;
-
+    private Pet[] pets = new Pet[0];
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
         this.name = name;
-        //= new Dog();
+
 
 
     }
@@ -91,3 +89,6 @@ public class PetOwner {
         return null;
     }
 }
+
+
+
