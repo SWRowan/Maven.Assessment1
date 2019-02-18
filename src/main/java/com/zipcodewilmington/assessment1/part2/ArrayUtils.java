@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -71,8 +73,20 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
+        Object leastCommon = objectArray[0];
+        int counter = 1;
 
-        return null;
+        for (int i = 0; i < objectArray.length; i++) {
+            Object testObj = objectArray[i];
+            int numOfOccur = getNumberOfOccurrences(objectArray, testObj);
+
+            if(numOfOccur == counter) {
+             leastCommon = objectArray[i];
+
+            }
+
+        }
+        return leastCommon;
     }
 
     /**
@@ -82,6 +96,26 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        ArrayList<Object> arrList = new ArrayList<>();
+
+        for (int i = 0; i <objectArray.length ; i++) {
+            arrList.add(objectArray[i]);
+        }
+
+        for (int j = 0; j <objectArrayToAdd.length ; j++) {
+            arrList.add(objectArrayToAdd[j]);
+        }
+
+//        System.out.println(arrList.toString());
+//
+//        Object[] answer = arrList.toArray();
+//        System.out.println(answer);
+        Integer[] answer = new Integer[arrList.size()];
+        answer = arrList.toArray(answer);
+
+
+
+
+        return answer;
     }
 }

@@ -43,8 +43,11 @@ public class IntegerUtils {
      * @return integer with identical digits in the reverse order
      */
     public static Integer reverseDigits(Integer val) {
+        String number = Integer.toString(val);
+        String revNumber = BasicStringUtils.reverse(number);
+        Integer reversed = Integer.valueOf(revNumber);
+        System.out.println(number);
 
-
-        return null;
+        return reversed;
     }
 }
