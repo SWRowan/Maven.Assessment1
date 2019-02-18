@@ -18,7 +18,9 @@ public class Jumper {
         }else if(k == j){
             jumpNum = 1;
         }
+        System.out.println(282475250 % 16808);
 
         return jumpNum;
     }
+
 }
